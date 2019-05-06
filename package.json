@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AndresDiaz1/mochaCourse#readme",
   "dependencies": {
+    "chai": "^4.2.0",
     "express": "^4.16.4",
     "jade": "^1.11.0",
     "nodemon": "^1.19.0"
