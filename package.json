@@ -1,0 +1,23 @@
+{
+  "name": "mochacourse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndresDiaz1/mochaCourse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndresDiaz1/mochaCourse/issues"
+  },
+  "homepage": "https://github.com/AndresDiaz1/mochaCourse#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "jade": "^1.11.0"
+  }
+}
