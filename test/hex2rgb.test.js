@@ -17,6 +17,26 @@ describe('hex2rgb ', function(){
             });
         });
 
+        it("should always return the result of parse", function(done) {
+            sinon.stub(hex2rgb, "parse").returns([0,0,200]);
+            hex2rgb.convert("#3265a2", function(err, result){
+                expect(result).to.deep.equal([0,0,200]);
+                hex2rgb.parse.restore();
+                done();
+            });
+        });
+
+        it("should always pass a 6 item array to parse", function(done){
+            var mock = sinon.mock(hex2rgb);
+            mock.expects("parse").twice().withExactArgs("000000".split(""));
+            hex2rgb.convert("#000000", function(err, result){
+                hex2rgb.convert("#000", function(err, result){
+                    mock.verify();
+                    done();
+                })
+            });
+        });
+
         it("should return an error if the value is not a hex code", function(done) {
             hex2rgb.convert("blue", function(error, result){
                 assert(error);
